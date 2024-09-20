@@ -13,8 +13,7 @@ file_content = infile.read()
 my_list = file_content.split()
 
 
-#encrypted_sentence = []  
- 
+encrypted_sentence = []   
 
 for word in my_list:
 
@@ -27,8 +26,18 @@ for word in my_list:
             encrypted_letter = codes[word[i]]
 
             encrypted_word.append(encrypted_letter)
+           
 
-    print(encrypted_word)
+    encrypted_sentence.append(encrypted_word)
 
-# outfile = open('encrypted.txt','w')
+
+print(encrypted_sentence)
+
+outfile = open('encrypted.txt','w')
+
+for item in encrypted_sentence:
+
+    for j in range(len(item)):
+
+        outfile.write(f"{j}\n")
 
