@@ -9,15 +9,17 @@ infile = open('encrypted.txt','r')
 
 file_content = infile.read()
 
+
+     
 for word in file_content:
 
     for i in range(len(word)):
 
-        if word[i] i==n codes[word[i]]:
+        for k,v in codes.items():
 
-            for k,v in dict.items():
+            if word[i] == v:
 
-                decrypted_letter = k
+                letter= k
 
-            print(decrypted_letter)
+            print(letter)
 
